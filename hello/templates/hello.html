@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test task</title>
+</head>
+<body>
+{% if name is None or message is None %}
+    {% if name is None %}
+    <p>Введите name</p>
+    {% endif %}
+
+    {% if message is None %}
+    <p>Введите message</p>
+    {% endif %}
+
+    <a href="/?name=Rekruto&message=Давай%20дружить">Ввести автоматически</a>
+
+    <p>/?name=Имя&message=Сообщение</p>
+{% endif %}
+
+{% if name is not None and message is not None %}
+    <p>Hello {{ name }}! {{ message }}!</p>
+{% endif %}
+
+</body>
+</html>
